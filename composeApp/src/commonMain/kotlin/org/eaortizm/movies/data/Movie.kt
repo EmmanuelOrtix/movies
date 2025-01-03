@@ -1,4 +1,4 @@
-package org.eaortizm.movies
+package org.eaortizm.movies.data
 
 data class Movie(
     val id: Int,

@@ -7,7 +7,6 @@ import coil3.compose.setSingletonImageLoaderFactory
 import coil3.request.crossfade
 import coil3.util.DebugLogger
 import org.eaortizm.movies.ui.screens.Navigation
-import org.eaortizm.movies.ui.screens.detail.DetailScreen
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @OptIn(ExperimentalCoilApi::class)
