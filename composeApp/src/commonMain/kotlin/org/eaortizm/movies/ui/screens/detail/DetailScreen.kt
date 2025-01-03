@@ -1,8 +1,7 @@
 package org.eaortizm.movies.ui.screens.detail
 
-import androidx.compose.foundation.layout.Column
+ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
@@ -21,21 +20,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
-import org.eaortizm.movies.movies
+import org.eaortizm.movies.Movie
 import org.eaortizm.movies.ui.screens.Screen
-import org.eaortizm.movies.ui.screens.home.MovieItem
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DetailScreen() {
-    val movie = movies[0]
+fun DetailScreen(movie: Movie, onBackClick: () -> Unit ) {
     Screen {
         Scaffold(
             topBar = {
                 TopAppBar(
                     title = { Text(movie.title) },
                     navigationIcon = {
-                        IconButton(onClick = {}) {
+                        IconButton(onClick = onBackClick) {
                             Icon(
                                 imageVector = Icons.AutoMirrored.Default.ArrowBack,
                                 contentDescription = null
