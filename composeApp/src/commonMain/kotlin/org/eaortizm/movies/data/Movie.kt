@@ -3,14 +3,12 @@ package org.eaortizm.movies.data
 data class Movie(
     val id: Int,
     val title: String,
+    val overview: String,
+    val releaseDate: String,
     val posterPath: String,
+    val backdropPath: String?,
+    val originalTitle: String,
+    val originalLanguage: String,
+    val popularity: Double,
+    val voteAverage: Double,
 )
-
-val movies = (1 ..100).map {
-    Movie(
-        id = it,
-        title = "Movie $it",
-        posterPath = "https://picsum.photos/200/300?id=$it"
-
-    )
-}

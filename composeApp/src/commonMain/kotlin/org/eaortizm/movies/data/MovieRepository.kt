@@ -14,6 +14,13 @@ class MovieRepository(private val movieService: MovieService) {
     private fun RemoteMovie.toDomainMovie() = Movie(
         id = id,
         title = title,
-        posterPath = "https://image.tmdb.org/t/p/w500$posterPath",
+        overview = overview,
+        releaseDate = releaseDate,
+        backdropPath = backdropPath?.let { "https://image.tmdb.org/t/p/w500/$it" },
+        posterPath = "https://image.tmdb.org/t/p/w185/$posterPath",
+        originalTitle = originalTitle,
+        originalLanguage = originalLanguage,
+        popularity = popularity,
+        voteAverage = voteAverage
     )
 }

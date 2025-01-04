@@ -5,13 +5,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.eaortizm.movies.data.Movie
 import org.eaortizm.movies.data.MovieRepository
-import org.eaortizm.movies.data.MovieService
-import org.eaortizm.movies.data.RemoteMovie
-import org.eaortizm.movies.data.movies
 
 class HomeViewModel(
     private val repository: MovieRepository

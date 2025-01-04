@@ -18,7 +18,6 @@ import movies.composeapp.generated.resources.Res
 import movies.composeapp.generated.resources.api_key
 import org.eaortizm.movies.data.MovieRepository
 import org.eaortizm.movies.data.MovieService
-import org.eaortizm.movies.data.movies
 import org.eaortizm.movies.ui.screens.detail.DetailScreen
 import org.eaortizm.movies.ui.screens.detail.DetailViewModel
 import org.eaortizm.movies.ui.screens.home.HomeScreen
