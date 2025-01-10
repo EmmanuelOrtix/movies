@@ -53,7 +53,7 @@ fun DetailScreen(viewModel: DetailViewModel, onBackClick: () -> Unit ) {
             }
         ) { padding ->
 
-            LoadingIndicator(state.isLoading)
+            LoadingIndicator(state.isLoading, modifier = Modifier.padding(padding))
 
             state.movie?.let { movie ->
                 MovieDetail(movie, modifier = Modifier.padding(padding))
@@ -102,7 +102,7 @@ private fun MovieDetail(
 private fun AnnotatedString.Builder.property(name: String, value: String, endLine: Boolean = false ) {
     withStyle(ParagraphStyle(lineHeight = 18.sp)) {
         withStyle(SpanStyle(fontWeight = FontWeight.Bold)) {
-            append(name)
+            append("$name: ")
         }
         append(value)
 
